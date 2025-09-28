@@ -89,6 +89,21 @@ body {
 	text-align: center;
 	z-index: 1;
 }
+			
+#visitor-counter {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 14px;
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    opacity: 0.8;
+}
+			
+#visitor-counter img {
+    vertical-align: middle;
+    border: none;
+}
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
@@ -215,6 +230,9 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
+	<div id="visitor-counter">
+    	<img src="https://visitor-badge.laobi.icu/badge?page_id=chris.ideology-quiz" alt="visitors"/>
+	</div>
 	</body>
 </html>
 
