@@ -235,8 +235,8 @@ const engine = new Engine(GODOT_CONFIG);
 		document.addEventListener("keydown", function(event) {
 		    if(event.key === "v" || event.key === "V") {
 		        const counter = document.getElementById("visitor-counter");
-		        counter.style.display = "block";
-		    }
+		        counter.style.display = counter.style.display === "block" ? "none" : "block";
+			}
 		});
 		</script>
 	<div id="visitor-counter">
