@@ -97,7 +97,7 @@ body {
     font-size: 4px;
     color: #e0e0e0;
     font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
-    opacity: 0.0;
+    opacity: 0.2;
 }
 			
 #visitor-counter img {
@@ -230,9 +230,18 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
+		<script>
+		fetch("https://visitor-badge.laobi.icu/badge?page_id=chris.ideology-quiz&format=json")
+		    .then(response => response.json())
+		    .then(data => {
+		        document.getElementById("visitor-count").textContent = data.message;
+		    })
+		    .catch(err => console.error("Visitor counter failed:", err));
+		</script>
 	<div id="visitor-counter">
-    	<img src="https://visitor-badge.laobi.icu/badge?page_id=BuckWildGames/Ideology-Quiz-Page" alt="visitors"/>
+    	<img src="https://visitor-badge.laobi.icu/badge?page_id=BuckWildGames/Ideology-Quiz-Page&format=json" alt="visitors"/>
 	</div>
+	<div id="visitor-counter"><span id="visitor-count">0</span></div>
 	</body>
 </html>
 
